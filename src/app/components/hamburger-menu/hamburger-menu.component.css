@@ -1,0 +1,24 @@
+.menu-items{
+  display: none;
+}
+
+svg{
+  display: none;
+}
+
+@media only screen and (max-width: 801px) {
+
+  .hamburger-menu {
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .menu-items.active {
+    display: block;
+  }
+  svg{
+    display: block;
+    height: 95%;
+  }
+}
+

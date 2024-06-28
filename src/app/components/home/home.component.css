@@ -1,0 +1,84 @@
+#myVideo {
+  max-width: 100%;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.kriszlogo {
+  width: 100%;
+  display: flex;
+  border-bottom-left-radius: 250px;
+  border-bottom-right-radius: 250px;
+}
+
+.about-text {
+  color: white;
+  text-align: center;
+  padding: 20%;
+}
+
+.social {
+  display: flex;
+  max-width: 100%;
+  justify-content: space-evenly;
+  position: relative;
+  margin: 2% 10% 0px 10%
+}
+
+svg {
+  max-width: 40px;
+  max-height: 40px;
+}
+
+.grid-container {
+  margin: 2rem;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: 40% auto;
+  justify-content: center;
+  align-content: center;
+}
+
+.grid-item2 {
+  display: flex;
+  align-items: center;
+}
+
+.grid-item3 {
+  grid-area: 2 / span 3;
+}
+
+.hideButton{
+  text-align: center;
+  font-size: 1.5rem;
+  border-radius: 20px;
+  width: 10rem;
+  height: 1,5rem;
+}
+
+@media only screen and (max-width: 770px) {
+  .grid-container {
+    margin: 2rem;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+  }
+
+  .grid-item1 {
+    grid-area: 1/1;
+  }
+
+  .grid-item2 {
+    grid-area: 2/1;
+    justify-content: center;
+  }
+
+  .social {
+    grid-area: 3/1;
+    justify-content: space-between;
+  }
+
+  .social svg {
+    max-width: 70%;
+  }
+
+}

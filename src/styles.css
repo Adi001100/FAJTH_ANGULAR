@@ -1,0 +1,9 @@
+html{
+  background: linear-gradient(to bottom, #CD2B1D 0%, #67160F 60%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
