@@ -33,3 +33,4 @@ build/
 ### VS Code ###
 .vscode/
 src/assets/OEGT.mp4
+.DS_Store
