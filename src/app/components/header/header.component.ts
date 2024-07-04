@@ -1,13 +1,25 @@
-import {Component, ElementRef} from '@angular/core';
-import {RouterLink, RouterOutlet} from "@angular/router";
+import { Component, Input, OnInit } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styleUrls: ['./header.component.css']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
 
-  constructor() {
+  @Input() configType: 'home' | 'beatGuess' | 'recommender' | 'press' | 'booking' = 'home';
+
+  isHome: boolean = false;
+
+  constructor(private router: Router) {
+  }
+
+  ngOnInit(): void {
+    this.router.events.subscribe(event => {
+      if (this.router.url === "/home"){
+        this.isHome = true
+      }
+    });
   }
 }

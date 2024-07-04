@@ -1,0 +1,24 @@
+.social {
+    display: flex;
+    max-width: 100%;
+    justify-content: space-evenly;
+    position: relative;
+    margin: 2% 10% 0px 10%
+}
+
+svg {
+    max-width: 40px;
+    max-height: 40px;
+}
+
+@media only screen and (max-width: 770px) {
+
+
+    .social {
+        justify-content: space-between;
+    }
+
+    .social svg {
+        max-width: 70%;
+    }
+}

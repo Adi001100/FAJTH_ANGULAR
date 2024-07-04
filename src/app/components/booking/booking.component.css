@@ -1,0 +1,13 @@
+.container {
+    display: grid;
+    justify-content: center;
+    max-width: 100%;
+    margin: 2rem;
+    grid-template-rows: auto auto;
+    grid-template-columns: 40% auto;
+    align-content: center;
+}
+
+.form {
+    width: 30%;
+}

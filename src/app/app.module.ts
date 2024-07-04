@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { AppRoutingModule } from "./app-routing.module";
-import {FooterComponent} from "./components/footer/footer.component";
-import {BeatGuessComponent} from "./components/beat-guess/beat-guess.component";
-import {BookingComponent} from "./components/booking/booking.component";
-import {PressComponent} from "./components/press/press.component";
-import {RecommenderComponent} from "./components/recommender/recommender.component";
-import {HamburgerMenuComponent} from "./components/hamburger-menu/hamburger-menu.component";
+import { FooterComponent } from "./components/footer/footer.component";
+import { BeatGuessComponent } from "./components/beat-guess/beat-guess.component";
+import { BookingComponent } from "./components/booking/booking.component";
+import { PressComponent } from "./components/press/press.component";
+import { RecommenderComponent } from "./components/recommender/recommender.component";
+import { HamburgerMenuComponent } from "./components/hamburger-menu/hamburger-menu.component";
+import { ReactiveFormsModule } from '@angular/forms';
+import { SocialComponent } from './components/social/social.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import {HamburgerMenuComponent} from "./components/hamburger-menu/hamburger-menu
     BookingComponent,
     PressComponent,
     RecommenderComponent,
-    HamburgerMenuComponent
+    HamburgerMenuComponent,
+    SocialComponent
   ],
   imports: [
     BrowserModule,
@@ -34,9 +37,11 @@ import {HamburgerMenuComponent} from "./components/hamburger-menu/hamburger-menu
       headerName: 'X-XSRF-TOKEN',
     }),
     AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
 
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+  export class AppModule { }

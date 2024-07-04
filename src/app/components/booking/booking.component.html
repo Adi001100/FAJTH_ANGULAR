@@ -1,1 +1,79 @@
-<p>booking works!</p>
+<app-header configType="booking"></app-header>
+<div class="container">
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit()" class="form">
+    <div>
+      <label for="locationName">Location Name</label>
+      <input id="locationName" formControlName="locationName">
+      <div *ngIf="myForm.get('locationName')?.invalid && myForm.get('locationName')?.touched">
+        Location name must not be blank
+      </div>
+    </div>
+
+    <div>
+      <label for="address">Address</label>
+      <input id="address" formControlName="address">
+      <div *ngIf="myForm.get('address')?.invalid && myForm.get('address')?.touched">
+        Address must not be blank
+      </div>
+    </div>
+
+    <div>
+      <label for="date">Date</label>
+      <input id="date" formControlName="date">
+      <div *ngIf="myForm.get('date')?.invalid && myForm.get('date')?.touched">
+        Date must not be blank
+      </div>
+    </div>
+
+    <div>
+      <label for="clientEmail">Email</label>
+      <input id="clientEmail" formControlName="clientEmail">
+      <div *ngIf="myForm.get('clientEmail')?.invalid && myForm.get('clientEmail')?.touched">
+        Email must not be blank and must be valid
+      </div>
+    </div>
+
+    <div>
+      <label for="clientName">Name</label>
+      <input id="clientName" formControlName="clientName">
+      <div *ngIf="myForm.get('clientName')?.invalid && myForm.get('clientName')?.touched">
+        Name must not be blank
+      </div>
+    </div>
+
+    <div>
+      <label for="hours">Hours</label>
+      <input id="hours" type="number" formControlName="hours">
+      <div *ngIf="myForm.get('hours')?.invalid && myForm.get('hours')?.touched">
+        Hours must not be blank
+      </div>
+    </div>
+
+    <div>
+      <label for="style">Style</label>
+      <input id="style" formControlName="style">
+    </div>
+
+    <div>
+      <label for="others">Others</label>
+      <input id="others" formControlName="others">
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <div *ngIf="orderInfo">
+    <h2>Order Created Successfully</h2>
+    <p><strong>Location Name:</strong> {{ orderInfo.locationName }}</p>
+    <p><strong>Address:</strong> {{ orderInfo.address }}</p>
+    <p><strong>Date:</strong> {{ orderInfo.date }}</p>
+    <p><strong>Email:</strong> {{ orderInfo.clientEmail }}</p>
+    <p><strong>Name:</strong> {{ orderInfo.clientName }}</p>
+    <p><strong>Hours:</strong> {{ orderInfo.hours }}</p>
+    <p *ngIf="orderInfo.style"><strong>Style:</strong> {{ orderInfo.style }}</p>
+    <p *ngIf="orderInfo.others"><strong>Others:</strong> {{ orderInfo.others }}</p>
+  </div>
+</div>
+
+<app-social></app-social>
+<app-footer></app-footer>

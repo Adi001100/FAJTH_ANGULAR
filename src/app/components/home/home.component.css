@@ -17,18 +17,6 @@
   padding: 20%;
 }
 
-.social {
-  display: flex;
-  max-width: 100%;
-  justify-content: space-evenly;
-  position: relative;
-  margin: 2% 10% 0px 10%
-}
-
-svg {
-  max-width: 40px;
-  max-height: 40px;
-}
 
 .grid-container {
   margin: 2rem;
@@ -72,7 +60,7 @@ svg {
     justify-content: center;
   }
 
-  .social {
+  .grid-item3 {
     grid-area: 3/1;
     justify-content: space-between;
   }
